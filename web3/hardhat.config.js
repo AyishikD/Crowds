@@ -1,15 +1,20 @@
-require('@nomiclabs/hardhat-waffle');
-
-const privateKey = '162358f50f041e70f7633dbc9906465efb213123c63d1aa50668498de11e9591';
-
+/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  networks: {
-    rinkeby: {
-      url: `https://rinkeby.infura.io/v3/3cbb3158eeb9418c8722151f7e7532f4`,
-      accounts: [privateKey],
-    },
-  },
   solidity: {
-    version: '0.8.17',
+    version: '0.8.9',
+    defaultNetwork: 'goerli',
+    networks: {
+      hardhat: {},
+      goerli: {
+        url: 'https://rpc.ankr.com/eth_goerli',
+        accounts: [`0x${process.env.PRIVATE_KEY}`]
+      }
+    },
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
   },
 };
