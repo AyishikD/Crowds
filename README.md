@@ -30,6 +30,10 @@ This project is a decentralized crowdfunding platform built using React for the 
 
 ## Getting Started
 
+## DEMO:
+![image](https://github.com/AyishikD/Crowds/assets/99983449/b0bbc555-6b88-448a-8122-9eafb708444e)
+
+
 ### Prerequisites
 
 - Node.js and npm installed
